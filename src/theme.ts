@@ -73,19 +73,27 @@ const theme = createTheme({
           textTransform: 'none',
           fontWeight: 600,
         },
-        containedPrimary: {
-          backgroundColor: '#E88D8C',
-          '&:hover': {
-            backgroundColor: '#d97776',
-          },
-        },
-        containedSecondary: {
-          backgroundColor: '#78373E',
-          '&:hover': {
-            backgroundColor: '#5c2a2f',
-          },
-        },
       },
+      variants: [
+        {
+          props: { variant: 'contained', color: 'primary' },
+          style: {
+            backgroundColor: '#E88D8C',
+            '&:hover': {
+              backgroundColor: '#d97776',
+            },
+          },
+        },
+        {
+          props: { variant: 'contained', color: 'secondary' },
+          style: {
+            backgroundColor: '#78373E',
+            '&:hover': {
+              backgroundColor: '#5c2a2f',
+            },
+          },
+        },
+      ],
     },
   },
 });
