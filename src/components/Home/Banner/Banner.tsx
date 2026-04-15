@@ -1,12 +1,13 @@
-import React from 'react';
-import { Box, Typography, Container, Button, Avatar } from '@mui/material';
-import videoFundo from "../../img/Video-LiBeaty.mp4";
-import FotoBanner from "../../img/banner-foto.png";
-import { getGradient } from '../../util/gradients';
+import { Box, Typography, Container, Button, Avatar, Fab } from '@mui/material';
+import videoFundo from "../../../img/Video-LiBeaty.mp4";
+import FotoBanner from "../../../img/banner-foto.png";
+import { getGradient } from '../../../util/gradients';
+import { textGradient } from '../../../styles/StylesComun.style';
+import WhatsAppIcon from '@mui/icons-material/WhatsApp';
 
 export const Banner: React.FC = () => {
     return (
-        <Box component="section" sx={{ position: 'relative', height: { xs: "auto", md: "700px" }, overflow: 'hidden', display: 'flex', alignItems: 'center'}}>
+        <Box component="section" sx={{ position: 'relative', height: { xs: "auto", md: "700px" }, overflow: 'hidden', display: 'flex', alignItems: 'center' }}>
             <video
                 autoPlay
                 loop
@@ -30,10 +31,10 @@ export const Banner: React.FC = () => {
             <Box sx={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', background: "rgba(120, 55, 62, 0.84)", zIndex: 1 }} />
 
             <Container maxWidth="lg" sx={{ position: 'relative', zIndex: 2 }}>
-                <Box sx={{ display: 'flex', flexDirection: { xs: 'column', md: 'row' }, alignItems: 'center', justifyContent: 'space-between', gap: 10,mt: -7 }}>
+                <Box sx={{ display: 'flex', flexDirection: { xs: 'column', md: 'row' }, alignItems: 'center', justifyContent: 'space-between', gap: 10, mt: -7 }}>
 
                     <Box sx={{ flex: 1, textAlign: { xs: 'center', md: 'left' }, ml: 4 }}>
-                        <Typography variant="h1" sx={{ fontSize: { xs: '3.5rem', md: '5.4rem' }, fontWeight: 500, letterSpacing: '6px', mb: 1, textShadow: '2px 5px 10px rgba(255, 255, 255, 0.42)',color: "#fff", background: getGradient('texto-banner'), WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', }}>
+                        <Typography variant="h1" sx={{ fontSize: { xs: '3.5rem', md: '5.4rem' }, fontWeight: 500, letterSpacing: '6px', mb: 1, textShadow: '2px 5px 10px rgba(255, 255, 255, 0.42)', background: getGradient("texto-banner"), ...textGradient, }}>
                             LI BEAUTY
                         </Typography>
 
@@ -79,6 +80,21 @@ export const Banner: React.FC = () => {
 
                 </Box>
             </Container>
+            <Fab
+                href="https://wa.me/"
+                target="_blank"
+                rel="noopener noreferrer"
+                sx={{
+                    position: 'fixed',
+                    bottom: 24,
+                    right: 24,
+                    zIndex: 1300,
+                    background: getGradient('texto-banner'),
+                    color: '#fff',
+                }}
+            >
+                <WhatsAppIcon fontSize='large' />
+            </Fab>
         </Box>
     );
 };

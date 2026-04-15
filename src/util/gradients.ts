@@ -3,7 +3,7 @@ const COLOR_SECUNDARIA = '#702626';
 const COLOR_SECUNDARIA_CLARA = '#FFCBCA';
 
 export const getGradient = (
-  type: 'main' | 'dark' | 'texto-banner' | 'transparent-mid' | 'transparent-sharp' = 'main'
+  type: 'main' | 'dark' | 'texto-banner' | 'texto-banner' | 'transparent-mid' | 'transparent-sharp' = 'main'
 ) => {
   switch (type) {
     case 'main':

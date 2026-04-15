@@ -1,6 +1,6 @@
-import UserIcon from "../../../img/User.png"; 
-import SecuriIcon from "../../../img/Securi.png";
-import EstrelaIcon from "../../../img/Estrela.png";
+import UserIcon from "../../../../img/User.png"; 
+import SecuriIcon from "../../../../img/Securi.png";
+import EstrelaIcon from "../../../../img/Estrela.png";
 
 export const features = [
     {

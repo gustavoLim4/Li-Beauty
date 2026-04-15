@@ -6,7 +6,7 @@ export const Features: React.FC = () => {
     return (
         <Box component="section">
             <Container sx={{width: 1100}}>
-                <Box sx={{ display: 'flex', flexDirection: { xs: 'column', md: 'row' }, gap: 2, justifyContent: 'center', alignItems: 'stretch', }}>
+                <Box sx={{zIndex: 1000, display: 'flex', flexDirection: { xs: 'column', md: 'row' }, gap: 2, justifyContent: 'center', alignItems: 'stretch', }}>
                     {features.map((item, index) => (
                         <Paper
                             key={index}
@@ -20,6 +20,7 @@ export const Features: React.FC = () => {
                                 boxShadow: "0 0 10px #0000007a",
                                 display: 'flex',
                                 flexDirection: 'column',
+                                zIndex: 10
                             }}
                         >
                             <Box sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center', minHeight: '100px' }}  >
@@ -31,7 +32,7 @@ export const Features: React.FC = () => {
                                 />
                             </Box>
 
-                            <Box sx={{ px: 3, backgroundColor: '#fff', flexGrow: 1 }}>
+                            <Box sx={{ px: 3, flexGrow: 1 }}>
                                 <Typography variant="h6" sx={{ color: '#E88D8C', fontWeight: 700, mb: 1, fontSize: '1.25rem', }}>
                                     {item.title}
                                 </Typography>

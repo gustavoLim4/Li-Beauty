@@ -96,6 +96,7 @@ export const Navbar = () => {
                     )}
                 </Toolbar>
             </Container>
+            
         </AppBar>
     );
 }
