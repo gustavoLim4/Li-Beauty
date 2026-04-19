@@ -1,9 +1,9 @@
-import { Box, Typography, Container, Button, Avatar, Fab } from '@mui/material';
+import { Box, Typography, Container, Button, Avatar } from '@mui/material';
 import videoFundo from "../../../img/Video-LiBeaty.mp4";
 import FotoBanner from "../../../img/banner-foto.png";
 import { getGradient } from '../../../util/gradients';
 import { textGradient } from '../../../styles/StylesComun.style';
-import WhatsAppIcon from '@mui/icons-material/WhatsApp';
+
 
 export const Banner: React.FC = () => {
     return (
@@ -80,21 +80,7 @@ export const Banner: React.FC = () => {
 
                 </Box>
             </Container>
-            <Fab
-                href="https://wa.me/"
-                target="_blank"
-                rel="noopener noreferrer"
-                sx={{
-                    position: 'fixed',
-                    bottom: 24,
-                    right: 24,
-                    zIndex: 1300,
-                    background: getGradient('texto-banner'),
-                    color: '#fff',
-                }}
-            >
-                <WhatsAppIcon fontSize='large' />
-            </Fab>
+        
         </Box>
     );
 };
